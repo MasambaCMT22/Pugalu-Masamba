@@ -131,7 +131,7 @@ class GoogleDriveHelper:
                                      resumable=False)
         file_metadata = {
             'name': file_name,
-            'description': 'Uploaded By Eunha Mirror',
+            'description': 'Uploaded By CMT Bot Mirror',
             'mimeType': mime_type,
         }
         if parent_id is not None:
@@ -190,7 +190,7 @@ class GoogleDriveHelper:
         # File body description
         file_metadata = {
             'name': file_name,
-            'description': 'Uploaded By Eunha Mirror',
+            'description': 'Uploaded By CMT Bot Mirror',
             'mimeType': mime_type,
         }
         try:
@@ -610,9 +610,9 @@ class GoogleDriveHelper:
                     content += f'<b> | <a href="https://telegra.ph/{self.path[nxt_page]}">Next</a></b>'
                     nxt_page += 1
             Telegraph(access_token=telegraph_token).edit_page(path = self.path[prev_page],
-                                 title = 'Eunha Mirror Search',
-                                 author_name='Eunha Mirror',
-                                 author_url='https://t.me/EunhaMirror',
+                                 title = 'CMT Mirror Bot Search',
+                                 author_name='CMT Mirror',
+                                 author_url='https://t.me/RequestMovie84',
                                  html_content=content)
         return
 
@@ -807,9 +807,9 @@ class GoogleDriveHelper:
 
         for content in self.telegraph_content :
             self.path.append(Telegraph(access_token=telegraph_token).create_page(
-                                                    title = 'Eunha Mirror Search',
-                                                    author_name='Eunha Mirror',
-                                                    author_url='https://t.me/EunhaMirror',
+                                                    title = 'CMT Mirror Bot Search',
+                                                    author_name='CMT Mirror',
+                                                    author_url='https://t.me/RequestMovie84',
                                                     html_content=content
                                                     )['path'])
 
@@ -819,7 +819,7 @@ class GoogleDriveHelper:
 
         msg = f"<b>Found <code>{all_contents_count}</code> results for <code>{fileName}</code></b>"
         buttons = button_build.ButtonMaker()
-        buttons.buildbutton("🔎 VIEW", f"https://telegra.ph/{self.path[0]}")
+        buttons.buildbutton("🔎 PERIKSA", f"https://telegra.ph/{self.path[0]}")
 
         return msg, InlineKeyboardMarkup(buttons.build_menu(1))
 
