@@ -44,18 +44,17 @@ def stats(update, context):
         
 def start(update, context):
     buttons = button_build.ButtonMaker()
-    buttons.buildbutton("Owner", "https://t.me/Anonymous_yz")
-    buttons.buildbutton("Bot Tutorial", "https://t.me/BotTutorialsMM")
-    buttons.buildbutton("Support Group", "https://t.me/drivetalk")
+    buttons.buildbutton("Chanel", "https://t.me/RequestMovie84")
+    buttons.buildbutton("Support Group", "https://t.me/Collection_MovieTerbaik")
     reply_markup = InlineKeyboardMarkup(buttons.build_menu(2))
     if CustomFilters.authorized_user(update) or CustomFilters.authorized_chat(update):
         start_string = f'''
-Hi, I'm DriveTalk Bot, a multipurpose bot for [Anonymous_yz](https://t.me/Anonymous_yz)
+Hi, I'm DriveTalk Bot, a multipurpose bot for [CMT Masamba](https://t.me/RequestMovie84)
 I can mirror all your links to Google Drive!
 Type /{BotCommands.HelpCommand} to get a list of available commands
-For any question join [Bot Support](https://t.me/drivetalk)
+For any question join [Bot Support](https://t.me/RequestMovie84)
 '''
-    update.effective_message.reply_photo("https://telegra.ph/file/d6fec502122a450d92142.jpg", start_string, parse_mode=ParseMode.MARKDOWN)
+    update.effective_message.reply_photo("https://telegra.ph/file/797e2fd172b1b65bad264.jpg", start_string, parse_mode=ParseMode.MARKDOWN)
         
 def ping(update, context):
         sendMarkup(
@@ -157,9 +156,9 @@ help_string_telegraph = f'''<br>
 <b>/{BotCommands.StatsCommand}</b>: Show Stats of the machine the bot is hosted on
 '''
 help = Telegraph(access_token=telegraph_token).create_page(
-        title='Atrocious Mirror Help',
-        author_name='AL-Noman',
-        author_url='https://t.me/smexynos7870',
+        title='CMT Mirror Bot Help',
+        author_name='Yoyong-Masamba',
+        author_url='https://t.me/RequestMovie84',
         html_content=help_string_telegraph,
     )["path"]
 
@@ -236,7 +235,7 @@ def main():
         os.remove(".restartmsg")
     elif OWNER_ID:
         try:
-            text = "<b>Atrocious Mirror Bot Restarted!</b>"
+            text = "<b>CMT Mirror Bot Restarted!</b>"
             bot.sendMessage(chat_id=OWNER_ID, text=text, parse_mode=ParseMode.HTML)
             if AUTHORIZED_CHATS:
                 for i in AUTHORIZED_CHATS:
@@ -261,7 +260,7 @@ def main():
     dispatcher.add_handler(stats_handler)
     dispatcher.add_handler(log_handler)
     updater.start_polling(drop_pending_updates=IGNORE_PENDING_REQUESTS)
-    LOGGER.info("Atrocious Mirror Bot Started!")
+    LOGGER.info("CMT Mirror Bot Started!")
     signal.signal(signal.SIGINT, fs_utils.exit_clean_up)
 
 app.start()
