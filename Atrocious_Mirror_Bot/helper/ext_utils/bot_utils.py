@@ -25,7 +25,7 @@ class MirrorStatus:
     STATUS_DOWNLOADING = "☞ 𝗨𝗻𝗱𝘂𝗵 𝗖𝗠𝗧...📥"
     STATUS_CLONING = "☞ 𝐂𝐥𝐨𝐧𝐢𝐧𝐠 𝗖𝗠𝗧...♻️"
     STATUS_WAITING = "☞ 𝐐𝐮𝐞𝐮𝐞𝐝...📝"
-    STATUS_FAILED = ""☞ 𝐅𝐚𝐢𝐥𝐞𝐝 🚫. 𝐂𝐥𝐞𝐚𝐧𝐢𝐧𝐠 𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝..."
+    STATUS_FAILED = "☞ 𝐅𝐚𝐢𝐥𝐞𝐝 🚫. 𝐂𝐥𝐞𝐚𝐧𝐢𝐧𝐠 𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝..."
     STATUS_PAUSE = "☞ 𝐏𝐚𝐮𝐬𝐞𝐝...⭕️"
     STATUS_ARCHIVING = "☞ 𝐀𝐫𝐜𝐡𝐢𝐯𝐢𝐧𝐠...🔐"
     STATUS_EXTRACTING = "☞ 𝗠𝗲𝗻𝗴𝗲𝗸𝘀𝘁𝗿𝗮𝗸 𝗖𝗠𝗧...📂"
