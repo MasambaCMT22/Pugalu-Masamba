@@ -21,19 +21,19 @@ PAGE_NO = 1
 
 
 class MirrorStatus:
-    STATUS_UPLOADING = "Uploading...📤"
-    STATUS_DOWNLOADING = "Downloading...📥"
-    STATUS_CLONING = "Cloning...♻️"
-    STATUS_WAITING = "Queued...📝"
-    STATUS_FAILED = "Failed 🚫. Cleaning Download..."
-    STATUS_PAUSE = "Paused...⭕️"
-    STATUS_ARCHIVING = "Archiving...🔐"
-    STATUS_EXTRACTING = "Extracting...📂"
-    STATUS_SPLITTING = "Splitting...✂️"
+    STATUS_UPLOADING = "☞ 𝗨𝗻𝗴𝗴𝗮𝗵 𝐂𝐌𝐓...📥"
+    STATUS_DOWNLOADING = "☞ 𝗨𝗻𝗱𝘂𝗵 𝗖𝗠𝗧...📥"
+    STATUS_CLONING = "☞ 𝐂𝐥𝐨𝐧𝐢𝐧𝐠 𝗖𝗠𝗧...♻️"
+    STATUS_WAITING = "☞ 𝐐𝐮𝐞𝐮𝐞𝐝...📝"
+    STATUS_FAILED = ""☞ 𝐅𝐚𝐢𝐥𝐞𝐝 🚫. 𝐂𝐥𝐞𝐚𝐧𝐢𝐧𝐠 𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝..."
+    STATUS_PAUSE = "☞ 𝐏𝐚𝐮𝐬𝐞𝐝...⭕️"
+    STATUS_ARCHIVING = "☞ 𝐀𝐫𝐜𝐡𝐢𝐯𝐢𝐧𝐠...🔐"
+    STATUS_EXTRACTING = "☞ 𝗠𝗲𝗻𝗴𝗲𝗸𝘀𝘁𝗿𝗮𝗸 𝗖𝗠𝗧...📂"
+    STATUS_SPLITTING = "☞ 𝐒𝐩𝐥𝐢𝐭𝐭𝐢𝐧𝐠...✂️"
 
 
 PROGRESS_MAX_SIZE = 100 // 8
-PROGRESS_INCOMPLETE = ['●', '●', '●', '●', '●', '●', '●']
+PROGRESS_INCOMPLETE = ['▏', '▎', '▍', '▌', '▋', '▊', '▉']
 
 SIZE_UNITS = ['B', 'KB', 'MB', 'GB', 'TB', 'PB']
 
@@ -108,10 +108,10 @@ def get_progress_bar_string(status):
     p = min(max(p, 0), 100)
     cFull = p // 8
     cPart = p % 8 - 1
-    p_str = '●' * cFull
+    p_str = '█' * cFull
     if cPart >= 0:
         p_str += PROGRESS_INCOMPLETE[cPart]
-    p_str += '○' * (PROGRESS_MAX_SIZE - cFull)
+    p_str += '░' * (PROGRESS_MAX_SIZE - cFull)
     p_str = f"[{p_str}]"
     return p_str
 
